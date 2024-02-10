@@ -42,16 +42,16 @@ const AddPost = () => {
 
                         <div className="row g-3">
 
-                            <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                                 <label htmlFor="" className="form-label">Post</label>
-                                <input type="text" className="form-control" name="post" value={input.post} onChange={inputHandler} />
+                                <textarea  cols="30" rows="10" className="form-control" name="post" value={input.post} onChange={inputHandler} ></textarea>
 
                             </div>
 
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                                <button className="btn btn-danger" onClick={readValues}>ADD</button>
+                                <button className="btn btn-danger" onClick={readValues}>Submit</button>
 
                             </div>
 
