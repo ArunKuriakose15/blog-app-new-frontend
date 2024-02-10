@@ -39,8 +39,7 @@ const Login = () => {
                 )
             }
             else{
-                alert("Login Success")
-                navigate("/home")
+                navigate("/add")
             }
             
         })
