@@ -23,6 +23,8 @@ const AddPost = () => {
                     {
                         post:""
                     }
+                )
+                
             }
             else {
                 alert("Something went wrong ...")
