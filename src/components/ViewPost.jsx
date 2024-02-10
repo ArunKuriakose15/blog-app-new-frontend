@@ -25,15 +25,15 @@ const ViewPost = () => {
                                 data.map(
                                     (value, index) => {
                                         return <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ">
-                                            <div class="card">
-                                                <div class="card-header">Post
+                                            <div className="card">
+                                                <div className="card-header">Post
                                                 </div>
-                                                <div class="card-body">
-                                                    <blockquote class="blockquote mb-0">
+                                                <div className="card-body">
+                                                    <blockquote className="blockquote mb-0">
                                                         <p>{value.post}</p>
-                                                        <footer class="blockquote-footer">{value.userId.name}</footer>
+                                                        <footer className="blockquote-footer">{value.userId.name}</footer>
                                                     </blockquote>
-                                                    <p class="card-text"><small>Last updated at {value.userId.date}</small></p>
+                                                    <p className="card-text"><small>Last updated at {value.postedDate}</small></p>
                                                 </div>
                                             </div>
                                         </div>
