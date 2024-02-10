@@ -19,6 +19,10 @@ const AddPost = () => {
 
             if (response.data.status == "success") {
                 alert("Posted")
+                setInput(
+                    {
+                        post:""
+                    }
             }
             else {
                 alert("Something went wrong ...")
