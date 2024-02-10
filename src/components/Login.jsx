@@ -39,6 +39,8 @@ const Login = () => {
                 )
             }
             else{
+                console.log(response.data.userData._id)
+                sessionStorage.setItem("userId",response.data.userData._id)
                 navigate("/add")
             }
             
@@ -52,27 +54,27 @@ const Login = () => {
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                        <div class="card mb-3 cen glass" >
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid rounded-start" alt="..."/>
+                        <div className="card mb-3 cen glass" >
+                            <div className="row g-0">
+                                <div className="col-md-4">
+                                    <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="img-fluid rounded-start" alt="..."/>
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Login</h5>
-                                        <p class="card-text">
+                                <div className="col-md-8">
+                                    <div className="card-body">
+                                        <h5 className="card-title">Login</h5>
+                                        <p className="card-text">
                                             <label htmlFor="" className="form-label">Email</label>
                                             <input type="text" className="form-control" name="email" value={input.email} onChange={inputHandler} />
                                         </p>
-                                        <p class="card-text">
+                                        <p className="card-text">
                                             <label htmlFor="" className="form-label">Password</label>
                                             <input type="password" className="form-control" name="password" value={input.password} onChange={inputHandler} />
                                         </p>
-                                        <p class="card-text">
+                                        <p className="card-text">
                                         <button className="btn btn-primary" onClick={readValues}>Login</button>
                                         </p>
-                                        <p class="card-text">
-                                        New User  <Link to="/signup"><small class="text-body-secondary" >Click Here</small></Link> 
+                                        <p className="card-text">
+                                        New User  <Link to="/signup"><small className="text-body-secondary" >Click Here</small></Link> 
                                             </p>
                                     </div>
                                 </div>

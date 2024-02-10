@@ -5,6 +5,7 @@ import axios from 'axios'
 const AddPost = () => {
     const [input, setInput] = new useState(
         {
+            userId:sessionStorage.getItem("userId"),
             post:""
         }
     )
@@ -30,6 +31,7 @@ const AddPost = () => {
                 alert("Something went wrong ...")
                 setInput(
                     {
+                        
                         post:""
                     }
                 )
