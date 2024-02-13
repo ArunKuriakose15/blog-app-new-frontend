@@ -5,8 +5,8 @@ import axios from 'axios'
 const AddPost = () => {
     const [input, setInput] = new useState(
         {
-            userId:sessionStorage.getItem("userId"),
-            post:""
+            userId: sessionStorage.getItem("userId"),
+            post: ""
         }
     )
 
@@ -22,17 +22,17 @@ const AddPost = () => {
                 alert("Posted")
                 setInput(
                     {
-                        post:""
+                        post: ""
                     }
                 )
-                
+
             }
             else {
                 alert("Something went wrong ...")
                 setInput(
                     {
-                        
-                        post:""
+
+                        post: ""
                     }
                 )
             }
@@ -53,7 +53,7 @@ const AddPost = () => {
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                                 <label htmlFor="" className="form-label">Post</label>
-                                <textarea  cols="30" rows="10" className="form-control" name="post" value={input.post} onChange={inputHandler} ></textarea>
+                                <textarea cols="30" rows="10" className="form-control" name="post" value={input.post} onChange={inputHandler} ></textarea>
 
                             </div>
 
