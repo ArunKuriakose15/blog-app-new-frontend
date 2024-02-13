@@ -1,8 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const NavBar = () => {
+    let navigate=useNavigate()
+
+    useEffect(()=>{
+        let userId=sessionStorage.getItem("userId")
+        if (userId===null || userId==undefined){
+            navigate("/")
+        }
+    })
+
+    const logOutAction=()=>{
+        sessionStorage.clear()
+        navigate("/")
+    }
+
   return (
+
     <div>
         
         <nav className="navbar navbar-expand-lg bg-danger">
@@ -26,7 +41,7 @@ const NavBar = () => {
                                 <Link className="nav-link" to="/viewown">View My Posts</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">Logout</Link>
+                                <span className="nav-link" onClick={logOutAction} >Logout</span>
                             </li>
                         </ul>
                     </div>
